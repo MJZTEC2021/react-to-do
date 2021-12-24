@@ -7,12 +7,12 @@ import TodoForm from './components/TodoForm';
 
 function App() {
   const [todos, setTodos] = useState([
-    { text: "Learn about React" },
-    { text: "Meet friend for lunch" },
-    { text: "Build really cool todo app" }
+    { text: 'Learn about React', isCompleted: false },
+    { text: 'Build a really cool to-do app', isCompleted: false },
+    { text: 'Commit to GitHub', isCompleted: false },
+    { text: 'Go for a walk', isCompleted: false  },
   ]);
   
-
   const addTodo = (text) => {
     const newTodos = [...todos, { text}];
     setTodos (newTodos);
@@ -20,10 +20,9 @@ function App() {
 
   const completeTodo = (index) => {
     const newTodos = [...todos];
-    newTodos[index].isCompleted = !newTodos[index]
-    .isCompleted;
+    newTodos[index].isCompleted = !newTodos[index].isCompleted;
     setTodos(newTodos);
-  }
+  };
 
   const removeTodo = (index) => {
     const newTodos = [...todos];

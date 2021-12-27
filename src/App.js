@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './style.css';
 import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
 
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>To-Do App</h1>
+      <h1>My To-Do App</h1>
     <div className="todo-list">
       {todos.map((todo, index) => (
         <Todo
